@@ -1,0 +1,33 @@
+name: Feature request
+description: Suggest an improvement for an already supported model.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: dropdown
+    id: model
+    attributes:
+      label: Toilet model
+      options:
+        - Leeventus DIB-J430R
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: Explain the problem and the result you would like to achieve.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe how the integration should behave from a user's perspective.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and requests.
+          required: true

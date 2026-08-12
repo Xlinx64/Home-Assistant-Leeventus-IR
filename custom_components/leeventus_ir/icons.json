@@ -1,0 +1,42 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "washing": { "default": "mdi:water" },
+      "drying": { "default": "mdi:hair-dryer" }
+    },
+    "button": {
+      "wash": { "default": "mdi:water" },
+      "female_wash": { "default": "mdi:human-female" },
+      "intense_wash": { "default": "mdi:water-alert" },
+      "dry": { "default": "mdi:hair-dryer" },
+      "stop": { "default": "mdi:stop-circle-outline" },
+      "self_clean": { "default": "mdi:spray-bottle" },
+      "apply_settings": { "default": "mdi:sync" }
+    },
+    "event": {
+      "received_action": { "default": "mdi:remote" }
+    },
+    "number": {
+      "jet_position": { "default": "mdi:arrow-up-down" },
+      "water_intensity": { "default": "mdi:gauge" },
+      "dryer_temperature": { "default": "mdi:hair-dryer" }
+    },
+    "select": {
+      "seat_temperature": { "default": "mdi:car-seat-heater" },
+      "water_temperature": { "default": "mdi:thermometer-water" },
+      "eco_level": { "default": "mdi:leaf" }
+    },
+    "sensor": {
+      "washing_until": { "default": "mdi:timer-outline" },
+      "drying_until": { "default": "mdi:timer-outline" },
+      "current_wash_program": { "default": "mdi:water-sync" },
+      "last_home_assistant_action": { "default": "mdi:history" },
+      "last_ir_receiver_action": { "default": "mdi:history" }
+    },
+    "switch": {
+      "light": { "default": "mdi:lightbulb" },
+      "oscillating_wash": { "default": "mdi:sync" },
+      "pulse_wash": { "default": "mdi:waves-arrow-up" }
+    }
+  }
+}

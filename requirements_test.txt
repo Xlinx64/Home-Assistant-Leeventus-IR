@@ -1,0 +1,4 @@
+pytest-homeassistant-custom-component==0.13.355
+infrared-protocols==8.2.1
+pytest-cov==7.1.0
+ruff==0.16.2

@@ -1,0 +1,185 @@
+{
+  "title": "Leeventus IR",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Leeventus IR",
+        "description": "Select the toilet model and the Home Assistant infrared emitter that points at it.",
+        "data": {
+          "model": "Model",
+          "infrared_entity_id": "Infrared emitter",
+          "infrared_receiver_entity_id": "Infrared receiver (optional)"
+        },
+        "data_description": {
+          "infrared_entity_id": "An infrared emitter entity provided by Broadlink, ESPHome, ZHA, or another compatible integration.",
+          "infrared_receiver_entity_id": "Optional. Valid signals from the physical remote update this integration's entities without sending IR."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Leeventus IR",
+        "data": {
+          "model": "Model",
+          "infrared_entity_id": "Infrared emitter",
+          "infrared_receiver_entity_id": "Infrared receiver (optional)"
+        }
+      }
+    },
+    "abort": {
+      "no_emitters": "No Home Assistant infrared emitter entity is available.",
+      "already_configured": "This model is already configured with the selected infrared emitter or receiver.",
+      "reconfigure_successful": "Leeventus IR was reconfigured successfully."
+    }
+  },
+  "selector": {
+    "model": {
+      "options": {
+        "dib_j430r": "Leeventus DIB-J430R"
+      }
+    }
+  },
+  "entity": {
+    "number": {
+      "jet_position": {
+        "name": "Jet position"
+      },
+      "water_intensity": {
+        "name": "Water intensity"
+      },
+      "dryer_temperature": {
+        "name": "Dryer temperature"
+      }
+    },
+    "select": {
+      "seat_temperature": {
+        "name": "Seat temperature",
+        "state": {
+          "off": "Off",
+          "level_1": "Level 1",
+          "level_2": "Level 2",
+          "level_3": "Level 3"
+        }
+      },
+      "water_temperature": {
+        "name": "Water temperature",
+        "state": {
+          "off": "Off",
+          "level_1": "Level 1",
+          "level_2": "Level 2",
+          "level_3": "Level 3"
+        }
+      },
+      "eco_level": {
+        "name": "Eco",
+        "state": {
+          "off": "Off",
+          "automatic": "Automatic",
+          "comprehensive": "Comprehensive"
+        }
+      }
+    },
+    "switch": {
+      "light": {
+        "name": "Light"
+      },
+      "oscillating_wash": {
+        "name": "Oscillating"
+      },
+      "pulse_wash": {
+        "name": "Pulsing"
+      }
+    },
+    "button": {
+      "wash": {
+        "name": "Wash"
+      },
+      "female_wash": {
+        "name": "Female wash"
+      },
+      "intense_wash": {
+        "name": "Intense wash"
+      },
+      "dry": {
+        "name": "Dry"
+      },
+      "stop": {
+        "name": "Stop"
+      },
+      "self_clean": {
+        "name": "Self-clean"
+      },
+      "apply_settings": {
+        "name": "Apply settings"
+      }
+    },
+    "sensor": {
+      "washing_until": {
+        "name": "Washing until"
+      },
+      "drying_until": {
+        "name": "Drying until"
+      },
+      "current_wash_program": {
+        "name": "Current wash program",
+        "state": {
+          "idle": "Idle",
+          "wash": "Wash",
+          "wash_pulsing": "Wash, pulsing",
+          "wash_oscillating": "Wash, oscillating",
+          "wash_pulsing_oscillating": "Wash, pulsing and oscillating",
+          "female_wash": "Female wash",
+          "female_wash_pulsing": "Female wash, pulsing",
+          "female_wash_oscillating": "Female wash, oscillating",
+          "female_wash_pulsing_oscillating": "Female wash, pulsing and oscillating",
+          "intense_wash": "Intense wash",
+          "intense_wash_pulsing": "Intense wash, pulsing",
+          "intense_wash_oscillating": "Intense wash, oscillating",
+          "intense_wash_pulsing_oscillating": "Intense wash, pulsing and oscillating"
+        }
+      },
+      "last_home_assistant_action": {
+        "name": "Last Home Assistant IR action",
+        "state": {
+          "apply": "Apply settings",
+          "stop": "Stop",
+          "wash": "Wash",
+          "female_wash": "Female wash",
+          "intense_wash": "Intense wash",
+          "dry": "Dry",
+          "pulse_wash": "Toggle pulsing",
+          "self_clean": "Self-clean"
+        }
+      },
+      "last_ir_receiver_action": {
+        "name": "Last IR receiver action",
+        "state": {
+          "apply": "Apply settings",
+          "stop": "Stop",
+          "wash": "Wash",
+          "female_wash": "Female wash",
+          "intense_wash": "Intense wash",
+          "dry": "Dry",
+          "pulse_wash": "Toggle pulsing",
+          "self_clean": "Self-clean"
+        }
+      }
+    },
+    "binary_sensor": {
+      "washing": {
+        "name": "Washing"
+      },
+      "drying": {
+        "name": "Drying"
+      }
+    },
+    "event": {
+      "received_action": {
+        "name": "Received action"
+      }
+    }
+  },
+  "exceptions": {
+    "whole_number_required": {
+      "message": "This setting only supports whole-number levels."
+    }
+  }
+}

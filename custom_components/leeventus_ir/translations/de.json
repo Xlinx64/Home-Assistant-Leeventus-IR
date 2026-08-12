@@ -1,0 +1,185 @@
+{
+  "title": "Leeventus IR",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Leeventus IR einrichten",
+        "description": "Wähle das Toilettenmodell und den Home-Assistant-IR-Sender, der darauf gerichtet ist.",
+        "data": {
+          "model": "Modell",
+          "infrared_entity_id": "IR-Sender",
+          "infrared_receiver_entity_id": "IR-Empfänger (optional)"
+        },
+        "data_description": {
+          "infrared_entity_id": "Eine IR-Sender-Entität von Broadlink, ESPHome, ZHA oder einer anderen kompatiblen Integration.",
+          "infrared_receiver_entity_id": "Optional. Gültige Signale der physischen Fernbedienung aktualisieren diese Entitäten, ohne IR zu senden."
+        }
+      },
+      "reconfigure": {
+        "title": "Leeventus IR neu konfigurieren",
+        "data": {
+          "model": "Modell",
+          "infrared_entity_id": "IR-Sender",
+          "infrared_receiver_entity_id": "IR-Empfänger (optional)"
+        }
+      }
+    },
+    "abort": {
+      "no_emitters": "Es ist keine Home-Assistant-IR-Sender-Entität verfügbar.",
+      "already_configured": "Dieses Modell ist mit dem ausgewählten IR-Sender oder IR-Empfänger bereits konfiguriert.",
+      "reconfigure_successful": "Leeventus IR wurde erfolgreich neu konfiguriert."
+    }
+  },
+  "selector": {
+    "model": {
+      "options": {
+        "dib_j430r": "Leeventus DIB-J430R"
+      }
+    }
+  },
+  "entity": {
+    "number": {
+      "jet_position": {
+        "name": "Düsenposition"
+      },
+      "water_intensity": {
+        "name": "Wasserstärke"
+      },
+      "dryer_temperature": {
+        "name": "Trocknertemperatur"
+      }
+    },
+    "select": {
+      "seat_temperature": {
+        "name": "Sitztemperatur",
+        "state": {
+          "off": "Aus",
+          "level_1": "Stufe 1",
+          "level_2": "Stufe 2",
+          "level_3": "Stufe 3"
+        }
+      },
+      "water_temperature": {
+        "name": "Wassertemperatur",
+        "state": {
+          "off": "Aus",
+          "level_1": "Stufe 1",
+          "level_2": "Stufe 2",
+          "level_3": "Stufe 3"
+        }
+      },
+      "eco_level": {
+        "name": "Eco",
+        "state": {
+          "off": "Aus",
+          "automatic": "Automatisch",
+          "comprehensive": "Umfassend"
+        }
+      }
+    },
+    "switch": {
+      "light": {
+        "name": "Licht"
+      },
+      "oscillating_wash": {
+        "name": "Oszillieren"
+      },
+      "pulse_wash": {
+        "name": "Pulsieren"
+      }
+    },
+    "button": {
+      "wash": {
+        "name": "Waschen"
+      },
+      "female_wash": {
+        "name": "Damenwäsche"
+      },
+      "intense_wash": {
+        "name": "Intensivwäsche"
+      },
+      "dry": {
+        "name": "Trocknen"
+      },
+      "stop": {
+        "name": "Stop"
+      },
+      "self_clean": {
+        "name": "Düsenreinigung"
+      },
+      "apply_settings": {
+        "name": "Einstellungen senden"
+      }
+    },
+    "sensor": {
+      "washing_until": {
+        "name": "Waschen bis"
+      },
+      "drying_until": {
+        "name": "Trocknen bis"
+      },
+      "current_wash_program": {
+        "name": "Aktuelles Waschprogramm",
+        "state": {
+          "idle": "Inaktiv",
+          "wash": "Waschen",
+          "wash_pulsing": "Waschen pulsierend",
+          "wash_oscillating": "Waschen oszillierend",
+          "wash_pulsing_oscillating": "Waschen pulsierend und oszillierend",
+          "female_wash": "Damenwäsche",
+          "female_wash_pulsing": "Damenwäsche pulsierend",
+          "female_wash_oscillating": "Damenwäsche oszillierend",
+          "female_wash_pulsing_oscillating": "Damenwäsche pulsierend und oszillierend",
+          "intense_wash": "Intensivwäsche",
+          "intense_wash_pulsing": "Intensivwäsche pulsierend",
+          "intense_wash_oscillating": "Intensivwäsche oszillierend",
+          "intense_wash_pulsing_oscillating": "Intensivwäsche pulsierend und oszillierend"
+        }
+      },
+      "last_home_assistant_action": {
+        "name": "Letzte Home-Assistant-IR-Aktion",
+        "state": {
+          "apply": "Einstellungen senden",
+          "stop": "Stop",
+          "wash": "Waschen",
+          "female_wash": "Damenwäsche",
+          "intense_wash": "Intensivwäsche",
+          "dry": "Trocknen",
+          "pulse_wash": "Pulsieren umschalten",
+          "self_clean": "Düsenreinigung"
+        }
+      },
+      "last_ir_receiver_action": {
+        "name": "Letzte IR-Empfänger-Aktion",
+        "state": {
+          "apply": "Einstellungen senden",
+          "stop": "Stop",
+          "wash": "Waschen",
+          "female_wash": "Damenwäsche",
+          "intense_wash": "Intensivwäsche",
+          "dry": "Trocknen",
+          "pulse_wash": "Pulsieren umschalten",
+          "self_clean": "Düsenreinigung"
+        }
+      }
+    },
+    "binary_sensor": {
+      "washing": {
+        "name": "Waschen"
+      },
+      "drying": {
+        "name": "Trocknen"
+      }
+    },
+    "event": {
+      "received_action": {
+        "name": "Empfangene Aktion"
+      }
+    }
+  },
+  "exceptions": {
+    "whole_number_required": {
+      "message": "Diese Einstellung unterstützt nur ganzzahlige Stufen."
+    }
+  }
+}

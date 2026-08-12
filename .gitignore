@@ -1,0 +1,16 @@
+.DS_Store
+*.textClipping
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+.pytest_cache/
+.ruff_cache/
+.venv/
+htmlcov/
+tmp/
+
+# Original exports may contain private Home Assistant data. Sanitized,
+# model-specific fixtures under tests/fixtures are intentionally tracked.
+broadlink_remote_codes
+*broadlink*codes*

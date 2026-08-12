@@ -1,0 +1,60 @@
+name: Bug report
+description: Report incorrect behavior in Leeventus IR.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Please remove secrets and unrelated personal data from logs before submitting them.
+  - type: input
+    id: integration_version
+    attributes:
+      label: Integration version
+      description: Copy the installed version shown by HACS or manifest.json.
+      placeholder: e.g. 1.3.0
+    validations:
+      required: true
+  - type: input
+    id: home_assistant_version
+    attributes:
+      label: Home Assistant version
+      placeholder: 2026.6.0
+    validations:
+      required: true
+  - type: dropdown
+    id: model
+    attributes:
+      label: Toilet model
+      options:
+        - Leeventus DIB-J430R
+    validations:
+      required: true
+  - type: input
+    id: infrared_provider
+    attributes:
+      label: Infrared emitter or receiver integration
+      placeholder: Broadlink, ESPHome, ZHA, or another provider
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the expected behavior and exact reproduction steps.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Home Assistant logs
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: I removed secrets and personal data from the logs.
+          required: true

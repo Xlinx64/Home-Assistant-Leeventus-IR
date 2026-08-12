@@ -1,0 +1,12 @@
+{
+  "domain": "leeventus_ir",
+  "name": "Leeventus IR",
+  "codeowners": ["@Xlinx64"],
+  "config_flow": true,
+  "dependencies": ["infrared"],
+  "documentation": "https://github.com/Xlinx64/Home-Assistant-Leeventus-IR",
+  "integration_type": "device",
+  "iot_class": "assumed_state",
+  "issue_tracker": "https://github.com/Xlinx64/Home-Assistant-Leeventus-IR/issues",
+  "version": "1.3.0"
+}

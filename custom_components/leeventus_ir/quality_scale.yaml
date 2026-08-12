@@ -1,0 +1,90 @@
+rules:
+  # Bronze
+  action-setup:
+    status: exempt
+    comment: The integration does not register custom service actions.
+  appropriate-polling: done
+  brands: done
+  common-modules: done
+  config-flow-test-coverage: done
+  config-flow: done
+  dependency-transparency: done
+  docs-actions:
+    status: exempt
+    comment: The integration does not register custom service actions.
+  docs-high-level-description: done
+  docs-installation-instructions: done
+  docs-removal-instructions: done
+  entity-event-setup: done
+  entity-unique-id: done
+  has-entity-name: done
+  runtime-data: done
+  test-before-configure:
+    status: exempt
+    comment: Safe configuration cannot transmit IR, and the protocol has no read-only handshake.
+  test-before-setup:
+    status: exempt
+    comment: Infrared emitters do not use credentials and may be temporarily unavailable.
+  unique-config-entry: done
+
+  # Silver
+  action-exceptions:
+    status: exempt
+    comment: The integration does not register custom service actions.
+  config-entry-unloading: done
+  docs-configuration-parameters: done
+  docs-installation-parameters: done
+  entity-unavailable: done
+  integration-owner: done
+  log-when-unavailable:
+    status: done
+    comment: Native infrared consumer helpers log source availability changes.
+  parallel-updates: done
+  reauthentication-flow:
+    status: exempt
+    comment: Infrared entities do not use credentials.
+  test-coverage:
+    status: done
+    comment: CI enforces at least 95 percent integration coverage.
+
+  # Gold
+  devices: done
+  diagnostics: done
+  discovery:
+    status: exempt
+    comment: A physical emitter must be selected explicitly.
+  discovery-update-info:
+    status: exempt
+    comment: The integration has no discovery flow.
+  docs-data-update: done
+  docs-conditions: todo
+  docs-examples: todo
+  docs-known-limitations: done
+  docs-supported-devices: done
+  docs-supported-functions: done
+  docs-troubleshooting: done
+  docs-triggers: todo
+  docs-use-cases: todo
+  dynamic-devices:
+    status: exempt
+    comment: Each config entry represents exactly one toilet.
+  entity-category: done
+  entity-device-class: done
+  entity-disabled-by-default:
+    status: done
+    comment: Diagnostic action-history sensors are disabled by default.
+  entity-translations: done
+  exception-translations: done
+  icon-translations: done
+  reconfiguration-flow: done
+  repair-issues: todo
+  stale-devices:
+    status: exempt
+    comment: Each config entry represents exactly one toilet.
+
+  # Platinum
+  async-dependency: done
+  inject-websession:
+    status: exempt
+    comment: The integration does not perform HTTP requests.
+  strict-typing: todo

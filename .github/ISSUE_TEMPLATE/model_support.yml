@@ -1,0 +1,33 @@
+name: New model support
+description: Request support for another Leeventus toilet model.
+title: "[Model]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Exact model designation
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Remote controls and functions
+      description: List the buttons and adjustable settings available on the original remote.
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Available IR hardware
+      description: Describe which Home Assistant IR emitter or receiver you can use for testing.
+    validations:
+      required: true
+  - type: checkboxes
+    id: cooperation
+    attributes:
+      label: Testing
+      options:
+        - label: I can safely capture signals and test generated commands on this exact model.
+          required: true
