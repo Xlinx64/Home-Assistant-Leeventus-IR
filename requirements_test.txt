@@ -1,4 +1,4 @@
 pytest-homeassistant-custom-component==0.13.355
-infrared-protocols==8.2.1
+infrared-protocols==9.0.0
 pytest-cov==7.1.0
 ruff==0.16.2
